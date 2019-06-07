@@ -22,8 +22,6 @@ namespace C969_Scheduling_Software_Project.Forms
         public static int currentAddressId = -1;
         public static int currentAppointmentId = -1;
 
-        //Lambda #3 used to simplify property declaration adn use less code
-        public int CurrentAppointmentDate { get => CurrentAppointmentDate; set { CurrentAppointmentDate = value;  } }
 
         public static string today3 = DateTime.Now.Date.ToString("yyyy-MM-dd");
         
@@ -224,11 +222,6 @@ namespace C969_Scheduling_Software_Project.Forms
             DataTable dt = new DataTable();
             adapter1.Fill(dt);
             AppointmentsDataGridView.DataSource = dt;
-
-
-            //15 minute reminder
-
-
 
             AppointmentsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             con1.Close();

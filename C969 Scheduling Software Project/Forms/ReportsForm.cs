@@ -17,7 +17,6 @@ namespace C969_Scheduling_Software_Project.Forms
     public partial class ReportsForm : Form
     {
         string newLine = Environment.NewLine;
-        public delegate int SomeMath(int i);
 
         public ReportsForm()
         {
@@ -35,27 +34,6 @@ namespace C969_Scheduling_Software_Project.Forms
         {
 
         }
-
-        public List<int> Hours(int I)
-        {
-            List<int> hours = new List<int>();
-            List<int> evenHours = hours.FindAll(delegate (int i)
-            {
-                return (i % 2 == 0);
-            });
-            foreach (var even in evenHours)
-            {
-                MessageBox.Show(Convert.ToString(even));
-            }
-
-            //lambda #1 used to make foreach simpler and require less code.
-            List<int> oddNumbers = hours.FindAll(i => i % 2 == 1);
-            oddNumbers.ForEach(i => MessageBox.Show("Hours for appointment: " + i));
-
-            return hours;
-        }
-
-
 
 
 
@@ -170,20 +148,6 @@ namespace C969_Scheduling_Software_Project.Forms
 
 
         #region Appointment descriptions by month (My Choice)
-        public List<int> CustomerIds(int I)
-        {
-            List<int> custIds = new List<int>();
-            List<int> EvenIds = custIds.FindAll(delegate (int C)
-            {
-                return (C == 0);
-            });
-
-            //lambda #2 used to make foreach simpler and require less code.
-            List<int> oddNumbers = custIds.FindAll(i => i % 2 == 1);
-            oddNumbers.ForEach(C => MessageBox.Show("Total amount of even customer Ids: " + C));
-
-            return custIds;
-        }
 
         public List<string> AppointmentDescriptionsForReport(int month)
         {
