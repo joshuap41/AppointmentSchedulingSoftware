@@ -1,0 +1,13 @@
+Coded by: Joshua Johnson
+
+5/17/19
+Issues with Foreign key access denied to user. Disable checks at the beginning of query and enable at the end of query
+
+1) Add in just beginning of database file:	SET FOREIGN_KEY_CHECKS = 0;
+2) Just before end of file at last line of file:	SET FOREIGN_KEY_CHECKS = 1;
+
+https://magento.stackexchange.com/questions/140857/how-to-disable-or-remove-foreign-key-before-importing-database-to-phpmyadmin
+https://stackoverflow.com/questions/10956195/mysql-error-1142-select-command-denied-to-user
+
+6/3/2019
+Made revisions to the project to satisfy the regision requirements.
