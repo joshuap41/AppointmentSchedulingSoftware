@@ -21,8 +21,6 @@ namespace C969_Scheduling_Software_Project.Forms
         public string DbPassword { get; private set; }
 
 
-
-
         String ErrorMessage = "";
         String FormType = "";
 
