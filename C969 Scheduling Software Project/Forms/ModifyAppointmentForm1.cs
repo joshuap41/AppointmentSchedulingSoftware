@@ -64,10 +64,10 @@ namespace C969_Scheduling_Software_Project.Forms
 
 
 
-
+        // debugging overlapping times here
         bool Overlap(TimeSpan a1, TimeSpan a2, TimeSpan a3, TimeSpan a4)
         {
-
+            
             //string s = a1.ToString() + "     " +
 
             //    a2.ToString() + "     " +
@@ -146,6 +146,7 @@ namespace C969_Scheduling_Software_Project.Forms
                             {
                                 int appId = (int)dt.Rows[i]["appointmentId"];
 
+                                // need to rework this part but it is working
                                 if (appId == MainScreenForm.currentAppointmentId)
                                 {
 
